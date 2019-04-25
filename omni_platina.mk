@@ -20,16 +20,7 @@ PRODUCT_RELEASE_NAME := platina
 $(call inherit-product, build/target/product/embedded.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
-
-# Charger
-PRODUCT_PACKAGES += \
-	charger_res_images \
-	charger
-
-# Encryption
-PRODUCT_PACKAGES += \
-    libcryptfs_hw
+$(call inherit-product, vendor/pb/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := omni_platina
