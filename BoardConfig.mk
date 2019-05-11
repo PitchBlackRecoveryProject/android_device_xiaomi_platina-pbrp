@@ -31,10 +31,10 @@ TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := kryo
 
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv7-a-neon
+TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := armv8-a
+TARGET_2ND_CPU_VARIANT := cortex-a73
 
 TARGET_USES_64_BIT_BINDER := true
 
@@ -44,11 +44,11 @@ TARGET_NO_BOOTLOADER := true
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
-TARGET_KEYMASTER_WAIT_FOR_QSEE := true
+#TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_FBE := true
 TW_INCLUDE_CRYPTO_FBE := true
-#TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
+TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000
@@ -99,13 +99,14 @@ TW_EXTRA_LANGUAGES := true
 #TW_HAS_EDL_MODE := true
 TW_INCLUDE_NTFS_3G := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
-TW_MAX_BRIGHTNESS := 255
+TW_MAX_BRIGHTNESS := 4095
 TW_THEME := portrait_hdpi
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_Y_OFFSET := 89
 TW_H_OFFSET := -89
 #TW_USE_TOOLBOX := true
-TW_CRYPTO_SYSTEM_VOLD_MOUNT := vendor cust odm
+#TW_CRYPTO_SYSTEM_VOLD_MOUNT := vendor cust odm
+#LZMA_RAMDISK_TARGETS := recovery
 
 # exFAT FS Support
 TW_INCLUDE_FUSE_EXFAT := true
@@ -114,4 +115,4 @@ TW_INCLUDE_FUSE_EXFAT := true
 TW_INCLUDE_FUSE_NTFS := true
 
 # Official
-PB_OFFICIAL := true
+#PB_OFFICIAL := true
